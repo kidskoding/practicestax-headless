@@ -11,7 +11,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .await?;
 
     println!("Server running on {localhost_url}");
-    axum::serve(listener, app).await?;
+    axum::serve(listener, app)
+        .await?;
 
     Ok(())
 }
